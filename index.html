@@ -9,7 +9,8 @@
     <div class="main-container">
       <h1> DevMountain Chat Room </h1>
       <select ng-model="selectedOption" ng-options="option.value as option.name for option in options">
-
+        <option>Message</option>
+        <option>Time</option>
       </select>
       <select  ng-model="reverse">
         <option value="1" selected>Descending</option>

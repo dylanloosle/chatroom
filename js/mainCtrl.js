@@ -33,13 +33,14 @@ app.controller('mainCtrl', function($scope, parseService){
     $scope.options = [
         {
             value: 'text',
-            name: 'text'
+            name: 'message'
         },
         {
             value: 'createdAt',
-            name: 'date'
+            name: 'time'
         }
     ];
+
 
   //uncomment this code when your getParseData function is finished
   //This goes and gets new data every second, which mimicking a chat room experience.
