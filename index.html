@@ -5,23 +5,26 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-  <body ng-controller="mainCtrl">
+  <body data-ng-controller="mainCtrl">
     <div class="main-container">
       <h1> DevMountain Chat Room </h1>
-      <select ng-model="selectedOption" ng-options="option.value as option.name for option in options">
+      Sort by:
+      <select data-ng-model="selectedOption" data-ng-options="option.value as option.name for option in options">
         <option>Message</option>
         <option>Time</option>
       </select>
-      <select  ng-model="reverse">
+      <select  data-ng-model="reverse">
         <option value="1" selected>Descending</option>
         <option value="">Ascending</option>
       </select>
-      <form ng-submit="postData()">
-        <input class="form-control text-box" type="text" ng-model="message" placeholder="Message">
+      <form data-ng-submit="postData()">
+        <input class="form-control text-box" type="text" data-ng-model="message" placeholder="Message">
       </form>
-      Filter messages: <input ng-model="filterable" placeholder="search">
+      <div class="filter">
+      Filter messages: <input data-ng-model="filterable" placeholder="search">
+      </div>
       <div class="messages-container">
-        <p class = "singleMessage" ng-repeat="message in messages | filter: filterable | orderBy: selectedOption: reverse"> {{message.text}} -{{message.createdAt | date: 'M/d/yyyy HH:mm:ss'}}</p>
+        <p class = "singleMessage" data-ng-repeat="message in messages | filter: filterable | orderBy: selectedOption: reverse"> {{message.text}} <span>{{message.createdAt | date: 'M/d/yyyy HH:mm:ss'}}</span></p>
 
 
       </div>

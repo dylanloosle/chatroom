@@ -7,7 +7,7 @@ body {
   height: 95%;
   width: 100%;
   font-family: sans-serif;
-  background-image: url('http://i.ytimg.com/vi/OwQo1sUavmw/maxresdefault.jpg');
+  background-image: url('http://utahpictures.com/images/atlanta_salt_lake/smPB190101.jpg');
 }
 
 .main-container {
@@ -35,5 +35,17 @@ p{
 }
 
 .singleMessage {
+  font-family: fantasy;
+  text-align: center;
+  margin: 2%;
   box-shadow: 0 1px 2px rgba(0,0,0,.075);
 }
+
+span {
+  box-sizing: border-box;
+  background: #2C97DE;
+  color: white;
+  float: right;
+  border-radius: 4px;
+}
+
