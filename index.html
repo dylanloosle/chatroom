@@ -8,17 +8,19 @@
   <body data-ng-controller="mainCtrl">
     <div class="main-container">
       <h1> DevMountain Chat Room </h1>
+        <label>
       Sort by:
-      <select data-ng-model="selectedOption" data-ng-options="option.value as option.name for option in options">
-        <option>Message</option>
-        <option>Time</option>
-      </select>
-      <select  data-ng-model="reverse">
-        <option value="1" selected>Descending</option>
-        <option value="">Ascending</option>
-      </select>
+        <select data-ng-model="selectedOption" data-ng-options="option.value as option.name for option in options">
+          <option>Message</option>
+          <option>Time</option>
+        </select>
+        <select  data-ng-model="reverse">
+          <option value="1" selected>Descending</option>
+          <option value="">Ascending</option>
+        </select>
+        </label>
       <form data-ng-submit="postData()">
-        <input class="form-control text-box" type="text" data-ng-model="message" placeholder="Message">
+        <input class="form-control text-box" type="text" data-ng-model="message" placeholder="Type your message here...">
       </form>
       <div class="filter">
       Filter messages: <input data-ng-model="filterable" placeholder="search">
